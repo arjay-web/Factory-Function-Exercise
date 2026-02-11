@@ -61,23 +61,24 @@ function renderPlayer(){
         </div>
         `;
 
+        const scoreText = playerCard.querySelector('p');
         const increaseBtn = playerCard.querySelector('.increaseBtn');
         const decreaseBtn = playerCard.querySelector('.decreaseBtn');
         const resetBtn = playerCard.querySelector('.resetBtn')
 
         increaseBtn.addEventListener('click',()=>{
             player.increaseScore();
-            renderPlayer();
+            scoreText.textContent = player.getScore();
         })
 
         decreaseBtn.addEventListener('click', ()=> {
             player.decreaseScore();
-            renderPlayer();
+            scoreText.textContent = player.getScore();
         })
 
         resetBtn.addEventListener('click', ()=>{
             player.reset();
-            renderPlayer()
+            scoreText.textContent = player.getScore();
         })
 
         playerContainer.appendChild(playerCard);
@@ -89,8 +90,12 @@ function renderPlayer(){
 
 addPlayerBtn.addEventListener('click',(e)=>{
     e.preventDefault();
+    if(playerName.value === ''){
+        return
+    }
     const player = playerName.value;
-    addPlayer(player);  
+    addPlayer(player);
+    playerName.value = '';
 })
 
 

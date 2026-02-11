@@ -7,23 +7,25 @@ body {
     padding: 0;
 }
 #container {
-    border: dashed #ccc 2px;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    background-color: antiquewhite;
+    padding: 20px;
+    background-color: #DFE3EE
 }
 
 #playerForm {
     height: 300px;
     width: 200px;
-    background-color: #ccc;
+    background-color: #FAFAFA;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
