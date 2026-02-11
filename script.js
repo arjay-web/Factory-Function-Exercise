@@ -97,14 +97,3 @@ addPlayerBtn.addEventListener('click',(e)=>{
     addPlayer(player);
     playerName.value = '';
 })
-
-
-
-
-
-
-// We can now create our html
-// this html consist a textbox and a button
-// that will let you input name of a player
-
-// this created player need to be stored in array
